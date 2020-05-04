@@ -1,0 +1,12 @@
+<div *ngIf="condition; else elseBlock">
+  Condition is True
+</div>
+<ng-template #elseBlock>
+  Condition is False
+</ng-template>
+
+<div *ngIf="condition; then thenBlock; else elseBlock2"></div>
+<ng-template #thenBlock>Content to render when condition is true.</ng-template>
+<ng-template #elseBlock2>
+  Content to render when condition is false.
+</ng-template>
